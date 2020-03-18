@@ -145,14 +145,14 @@ function newArticle(newData) {
 
   mapElements.map(element => article.appendChild(element));
 
-  span.classList.add("expandButton");
-  span.textContent = "Expand";
+  spanClass.classList.add("expandButton");
+  spanClass.textContent = "Expand";
 
   return article;
 }
 
 const articleContainer = document.querySelector(".articles");
 data.map(detail => {
-  let article = newArticle(detail);
+  const article = newArticle(detail);
   articleContainer.appendChild(article);
 });
