@@ -141,5 +141,18 @@ function newArticle(newData) {
   p2.textContent = thirdParagraph;
 
   dateP.classList.add("date");
-  const
+  const mapElements = [h2, dateP, p0, p1, p2, spanClass];
+
+  mapElements.map(element => article.appendChild(element));
+
+  span.classList.add("expandButton");
+  span.textContent = "Expand";
+
+  return article;
 }
+
+const articleContainer = document.querySelector(".articles");
+data.map(detail => {
+  let article = newArticle(detail);
+  articleContainer.appendChild(article);
+});
