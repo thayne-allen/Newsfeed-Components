@@ -121,4 +121,25 @@ function newArticle(newData) {
   const p1 = document.createElement("p");
   const p2 = document.createElement("p");
   const spanClass = document.createElement("span");
+
+  spanClass.addEventListener("click", event => {
+    article.classList.toggle("article-open");
+  });
+
+  const {
+    title,
+    date,
+    firstParagraph,
+    secondParagraph,
+    thirdParagraph
+  } = newData;
+  article.classList.add("article");
+  h2.textContent = title;
+  dateP.textContent = date;
+  p0.textContent = firstParagraph;
+  p1.textContent = secondParagraph;
+  p2.textContent = thirdParagraph;
+
+  dateP.classList.add("date");
+  const
 }
